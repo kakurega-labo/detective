@@ -1,0 +1,214 @@
+*, *::before, *::after {
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+:root {
+    --primary-blue: #1a2a40;
+    --accent-gold: #d4af37;
+    --office-brown: #3d2b1f;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.7;
+}
+
+html, body, button, a {
+  touch-action: manipulation;
+}
+
+.font-serif-jp {
+    font-family: 'Shippori Mincho', serif;
+}
+
+/* ナビゲーションリンクのアニメーション */
+.nav-link {
+    position: relative;
+    padding: 0.5rem 0;
+    transition: color 0.3s;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--accent-gold);
+    transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: var(--accent-gold);
+}
+
+/* プロフィール画像の枠装飾 */
+.profile-image-container {
+    position: relative;
+    z-index: 1;
+}
+
+/* サービスカードのホバーエフェクト */
+.service-card {
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+#menu {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* モバイルメニュー展開時のスタイル */
+#menu.active {
+    /* アニメーション用状態 */
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* 非アクティブ時および開閉アニメーション中のモバイル用スタイル */
+@media (max-width: 767px) {
+    #menu {
+        display: flex !important; 
+        flex-direction: column;
+        position: absolute; /* 閉じるアニメーション中も浮いた状態を維持 */
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: var(--primary-blue);
+        padding: 1rem;
+        gap: 1.5rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+        z-index: 40;
+    }
+
+    #menu:not(.active) {
+        opacity: 0;
+        transform: translateY(-10px);
+        pointer-events: none;
+    }
+}
+
+@media (max-width: 767px) {
+        #menu li {
+            cursor: pointer;
+            width: 100%;
+        }
+        #menu a {
+            display: block;
+            width: 100%;
+            padding: 0.5rem 0;
+        }
+    }
+
+#back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav-link.active-page {
+    color: var(--accent-gold);
+}
+.nav-link.active-page::after {
+    width: 100%;
+}
+
+/* ページネーション用スタイル */
+.pagination-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #e2e8f0; /* border-slate-200 */
+    font-size: 0.75rem; /* text-xs */
+    font-weight: bold;
+    color: #475569; /* text-slate-600 */
+    transition: all 0.3s;
+}
+
+.pagination-link:hover {
+    background-color: #f8fafc;
+    border-color: var(--accent-gold);
+    color: var(--accent-gold);
+}
+
+.pagination-link.active {
+    background-color: var(--primary-blue);
+    border-color: var(--primary-blue);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    #topNews {
+        max-width: 300px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+/* map style */
+.no-scrollbar::-webkit-scrollbar {
+        display: none;
+}
+
+.spot-label { opacity: 0; transition: opacity 0.3s; 
+        pointer-events: none;
+}
+
+.zoomed-in .spot-label { 
+        opacity: 1;
+}
+
+#canvas { transition: 
+        transform 0.1s ease-out;
+}
+
+#pins-container > div svg { 
+        filter: drop-shadow(0 4px 3px rgba(0,0,0,0.25));
+}
+
+/* スポット詳細パネルのスクロールバー制御 */
+.detail-scrollbar-custom {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+/* Chrome, Safari用: デフォルトは非表示 */
+.detail-scrollbar-custom::-webkit-scrollbar {
+    width: 6px;
+    display: none;
+}
+
+/* PC（ホバー可能なデバイス）かつホバー時のみ表示 */
+@media (hover: hover) and (min-width: 768px) {
+    .detail-scrollbar-custom:hover::-webkit-scrollbar {
+        display: block;
+    }
+    
+    .detail-scrollbar-custom::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    
+    .detail-scrollbar-custom::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
+
+    .detail-scrollbar-custom::-webkit-scrollbar-thumb:hover {
+        background: rgba(0, 0, 0, 0.2);
+    }
+}
