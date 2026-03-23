@@ -1,1 +1,1 @@
-# mouri-detective
+# detective
