@@ -294,7 +294,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 </div>
                             </div>
                         </div>
-                        <div class="flex border-b border-slate-100 sticky top-[61px] bg-white z-10">
+                        <div class="flex border-b border-slate-100 sticky bg-white z-10">
                             <div class="flex-grow text-center py-4 font-bold border-b-2 border-yellow-600 text-sm">ポスト</div>
                             <div class="flex-grow text-center py-4 text-slate-400 text-sm">返信</div>
                             <div class="flex-grow text-center py-4 text-slate-400 text-sm">画像</div>
