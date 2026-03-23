@@ -204,14 +204,15 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = 'hidden';
     };
 
-    const getHeader = (data) => `
+    const getHeader = (data, type) => `
         <div class="sticky top-0 z-20 bg-white/90 backdrop-blur-md border-b border-slate-100 items-center max-w-2xl">
           <div class="max-w-2xl mx-auto p-2.5 flex items-center">
             <button id="close-sns-btn" class="p-2 hover:bg-slate-100 rounded-full transition">
                 <svg class="w-6 h-6 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
             </button>
-            <div class="ml-6 flex-grow">
-                <h4 class="font-bold text-lg text-slate-900">${data.name}</h4>
+            <div class="${type === 'instaPhoto' ? '' : 'ml-6'} flex-grow">
+              <div class="flex flex-col ${type === 'instaPhoto' ? 'text-center' : ''}">
+                <h4 class="font-bold text-lg text-slate-900">${type === 'instaPhoto' ? data.id : data.name}</h4>
             </div>
             <div id="header-action-area" class="mr-2"></div>
           </div> 
@@ -270,7 +271,7 @@ document.addEventListener('DOMContentLoaded', () => {
                    </nav>
                   </aside>
                     <div class="flex-grow max-w-2xl border-x border-slate-100 lg:mr-6">
-                        ${getHeader(data)} <div class="relative">
+                        ${getHeader(data, 'talker')} <div class="relative">
                             <div class="h-32 md:h-48 bg-slate-300"></div>
                             <div class="px-4 pb-4">
                                 <div class="relative flex justify-between items-end -mt-12 mb-4">
@@ -465,7 +466,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         modal.innerHTML = `
             <div class="max-w-2xl mx-auto min-h-screen bg-white">
-                ${getHeader(data)}
+                ${getHeader(data, 'instaPhoto')}
                 <div>
                     <div class="flex items-center gap-6 md:gap-10 mt-3 mb-8 mx-3">
                         <div class="w-24 h-24 md:w-32 md:h-32 bg-gradient-to-tr from-yellow-400 to-red-500 p-1 rounded-full flex-shrink-0">
