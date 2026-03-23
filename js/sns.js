@@ -467,7 +467,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="max-w-2xl mx-auto min-h-screen bg-white">
                 ${getHeader(data)}
                 <div>
-                    <div class="flex items-center gap-6 md:gap-10 mb-8 mx-3">
+                    <div class="flex items-center gap-6 md:gap-10 mt-3 mb-8 mx-3">
                         <div class="w-24 h-24 md:w-32 md:h-32 bg-gradient-to-tr from-yellow-400 to-red-500 p-1 rounded-full flex-shrink-0">
                             <div class="w-full h-full bg-white rounded-full p-1">
                                 <div class="w-full h-full bg-slate-200 rounded-full flex items-center justify-center text-slate-400 overflow-hidden">
