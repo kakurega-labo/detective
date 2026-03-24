@@ -204,15 +204,14 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = 'hidden';
     };
 
-    const getHeader = (data, type) => `
+    const getHeader = (data) => `
         <div class="sticky top-0 z-20 bg-white/90 backdrop-blur-md border-b border-slate-100 items-center max-w-2xl">
           <div class="max-w-2xl mx-auto p-2.5 flex items-center">
             <button id="close-sns-btn" class="p-2 hover:bg-slate-100 rounded-full transition">
                 <svg class="w-6 h-6 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
             </button>
-            <div class="${type === 'instaPhoto' ? '' : 'ml-6'} flex-grow">
-              <div class="flex flex-col ${type === 'instaPhoto' ? 'text-center' : ''}">
-                <h4 class="font-bold text-lg text-slate-900">${type === 'instaPhoto' ? data.id : data.name}</h4>
+            <div class="ml-6 flex-grow">
+                <h4 class="font-bold text-lg text-slate-900">${data.name}</h4>
             </div>
             <div id="header-action-area" class="mr-2"></div>
           </div> 
@@ -261,17 +260,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         modal.innerHTML = `
             <div class="max-w-2xl lg:max-w-6xl mx-auto min-h-screen bg-white">
-                <div class="lg:flex px-0 lg:px-4">
-                  <aside class="hidden md:flex flex-col items-end sticky top-0 h-screen border-r border-slate-100">
-                   <nav>
-                    <div class="p-3.5">
-                     <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
-                     </svg>
-                    </div>
-                   </nav>
-                  </aside>
-                    <div class="flex-grow max-w-2xl border-x border-slate-100 lg:mr-6">
-                        ${getHeader(data, 'talker')} <div class="relative">
+                <div class="lg:flex lg:gap-8 px-0 lg:px-4">
+                    <div class="flex-grow max-w-2xl border-x border-slate-100">
+                        ${getHeader(data)} <div class="relative">
                             <div class="h-32 md:h-48 bg-slate-300"></div>
                             <div class="px-4 pb-4">
                                 <div class="relative flex justify-between items-end -mt-12 mb-4">
@@ -294,7 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 </div>
                             </div>
                         </div>
-                        <div class="flex border-b border-slate-100 sticky bg-white z-10">
+                        <div class="flex border-b border-slate-100 sticky top-[61px] bg-white z-10">
                             <div class="flex-grow text-center py-4 font-bold border-b-2 border-yellow-600 text-sm">ポスト</div>
                             <div class="flex-grow text-center py-4 text-slate-400 text-sm">返信</div>
                             <div class="flex-grow text-center py-4 text-slate-400 text-sm">画像</div>
@@ -466,9 +457,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         modal.innerHTML = `
             <div class="max-w-2xl mx-auto min-h-screen bg-white">
-                ${getHeader(data, 'instaPhoto')}
+                ${getHeader(data)}
                 <div>
-                    <div class="flex items-center gap-6 md:gap-10 mt-3 mb-8 mx-3">
+                    <div class="flex items-center gap-6 md:gap-10 mb-8 mx-3">
                         <div class="w-24 h-24 md:w-32 md:h-32 bg-gradient-to-tr from-yellow-400 to-red-500 p-1 rounded-full flex-shrink-0">
                             <div class="w-full h-full bg-white rounded-full p-1">
                                 <div class="w-full h-full bg-slate-200 rounded-full flex items-center justify-center text-slate-400 overflow-hidden">
