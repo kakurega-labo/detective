@@ -733,7 +733,7 @@ function openViewTube() {
                     <button class="px-6 py-4 hover:bg-slate-50 flex items-center gap-4 text-base border-b border-slate-50 w-[-webkit-fill-available]">再生履歴</button>
                     <button class="px-6 py-4 hover:bg-slate-50 flex items-center gap-4 text-base border-b border-slate-50 w-[-webkit-fill-available]">アプリを開く</button>
                     <button class="px-6 py-4 hover:bg-slate-50 flex items-center gap-4 text-base border-b border-slate-50 w-[-webkit-fill-available]">ヘルプ</button>
-                    <button id="close-viewtube-mobile" class="px-6 py-4 hover:bg-slate-50 flex items-center gap-4 text-base w-[-webkit-fill-available]">Viewtubeを閉じる</button>
+                    <button id="close-viewtube-mobile" class="px-6 py-4 hover:bg-slate-50 flex items-center gap-4 text-base w-[-webkit-fill-available]">ViewTubeを閉じる</button>
                 `;
             } else {
                 menu.className = 'fixed top-12 right-20 w-64 bg-white rounded-xl shadow-xl z-[70] flex flex-col py-2 border border-slate-200';
@@ -745,7 +745,7 @@ function openViewTube() {
                     <button class="px-4 py-3 hover:bg-slate-100 flex items-center gap-3 text-sm w-[-webkit-fill-available]">設定</button>
                     <button class="px-4 py-3 hover:bg-slate-100 flex items-center gap-3 text-sm w-[-webkit-fill-available]">ヘルプ</button>
                     <div class="h-[1px] bg-slate-100 my-1"></div>
-                    <button id="close-viewtube" class="px-4 py-3 hover:bg-slate-100 flex items-center gap-3 text-sm w-[-webkit-fill-available]">Viewtubeを閉じる</button>
+                    <button id="close-viewtube" class="px-4 py-3 hover:bg-slate-100 flex items-center gap-3 text-sm w-[-webkit-fill-available]">ViewTubeを閉じる</button>
                 `;
             }
 
