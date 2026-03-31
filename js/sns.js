@@ -210,8 +210,8 @@ document.addEventListener('DOMContentLoaded', () => {
             <button id="close-sns-btn" class="p-2 hover:bg-slate-100 rounded-full transition">
                 <svg class="w-6 h-6 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
             </button>
-            <div class="ml-6 flex-grow">
-                <h4 class="font-bold text-lg text-slate-900">${data.name}</h4>
+            <div class="${data === snsData.insta ? 'flex-grow' : 'ml-6 flex-grow'}">
+                <h4 class="font-bold text-lg text-slate-900 ${data === snsData.insta ? 'text-center' : ''}">${data === snsData.insta ? data.id : data.name}</h4>
             </div>
             <div id="header-action-area" class="mr-2"></div>
           </div> 
