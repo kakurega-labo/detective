@@ -236,7 +236,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <p class="text-sm mt-1 text-slate-800 leading-relaxed">${post.content}</p>
                         <div class="flex gap-2 mt-3 text-slate-500 text-xs select-none justify-between [--webkit-user-select:none] [--webkit-tap-highlight-color:transparent]">
                             <button class="action-btn-reply w-16 hover:text-blue-500 flex items-center gap-1 transition-colors">
-                                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 0 1-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                                 <span class="truncate">${post.reply}</span>
                             </button>
                             <button class="action-btn-retweet w-16 hover:text-green-500 flex items-center gap-1 transition-colors">
