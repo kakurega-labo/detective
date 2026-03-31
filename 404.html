@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=0">
+    <title>毛利小五郎探偵事務所 | 東京都米花市の総合調査・警備</title>
+    <meta name="description" content="東京都米花市の毛利小五郎探偵事務所。浮気調査、行方不明者捜索、身辺警護など、元警視庁捜査一課の経験を活かした確かな調査力で解決に導きます。">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;700&family=Noto+Sans+JP:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="text-slate-900 bg-[#f9f7f2]">
+
+    <header class="fixed w-full z-50 bg-[#1a2a40] text-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="logo">
+                <h1 class="font-serif-jp text-xl md:text-2xl font-bold tracking-widest text-white leading-none">
+                    毛利小五郎探偵事務所
+                </h1>
+                <p class="text-[10px] md:text-xs text-yellow-500 mt-1 tracking-tighter uppercase font-bold">Mouri Detective Agency</p>
+            </div>
+            
+            <button id="menu-btn" class="md:hidden block focus:outline-none" aria-label="メニュー開閉">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+
+            <nav id="menu" class="hidden md:block">
+                <ul class="flex flex-col md:flex-row md:space-x-8 text-sm font-bold tracking-widest uppercase">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#pricing" class="nav-link">Pricing</a></li>
+                    <li><a href="#access" class="nav-link">Access</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow flex items-center justify-center pt-20">
+        <section class="py-24 px-6 text-center">
+            <div class="max-w-2xl mx-auto">
+                <p class="text-yellow-600 font-bold mb-4 tracking-[0.3em] text-lg uppercase">404 Error</p>
+                <h2 class="font-serif-jp text-4xl font-bold leading-tight mb-8 text-slate-900">
+                    ページが見つかりません。
+                </h2>
+                <div class="w-16 h-1 bg-yellow-600 mx-auto mb-8"></div>
+                <p class="text-slate-600 leading-relaxed mb-12">
+                    お探しのページは、移動または削除されたか、<br class="hidden md:block">
+                    URLが間違っている可能性があります。
+                </p>
+                <a href="index.html" class="inline-block bg-[#1a2a40] text-white px-12 py-4 font-bold tracking-[0.2em] hover:bg-yellow-600 transition-colors duration-300">
+                    トップページへ戻る
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="font-serif-jp text-xl font-bold tracking-widest mb-2">毛利小五郎探偵事務所</h2>
+            <p class="text-[10px] text-slate-400 mb-6 tracking-widest">東京都米花市米花町5丁目39番地1号 2階</p>
+            
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="javascript:void(0)" id="open-sns-x" class="text-slate-400 hover:text-yellow-600 transition" aria-label="Talker">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                </a>
+                <a href="javascript:void(0)" id="open-sns-insta" class="text-slate-400 hover:text-yellow-600 transition" aria-label="InstaPhoto">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </a>
+                <a href="viewtube/kogoro_detective_ch" id="open-video-viewtube" class="text-slate-400 hover:text-red-600 transition" aria-label="ViewTube">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+                </a>
+                <a href="javascript:void(0)" id="open-glink-map" class="text-slate-400 hover:text-green-500 transition" aria-label="G-link Map">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>
+                </a>
+            </div>
+
+            <div class="flex justify-center space-x-6 text-xs text-slate-400 mb-8 font-bold uppercase tracking-tighter">
+                <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition">Terms of Service</a>
+            </div>
+            <p class="text-[10px] text-slate-500 tracking-widest uppercase">
+                &copy; 2026 Mouri Detective Agency. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <button id="back-to-top" class="fixed bottom-4 right-8 bg-[#1a2a40] text-white p-3 border border-slate-200 rounded-full shadow-xl opacity-0 invisible transition-all duration-300 z-40 hover:bg-yellow-600">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+    </button>
+
+    <script src="js/script.js"></script>
+    <script src="js/news.js"></script>
+    <script src="js/sns.js"></script>
+    <script src="js/map.js"></script>
+</body>
+</html>
